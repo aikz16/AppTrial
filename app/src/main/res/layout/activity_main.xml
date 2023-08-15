@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="409dp"
+    android:layout_height="657dp"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#8CC295"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="401dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/welcome_message"
+            android:textSize="40sp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView"
+            app:layout_constraintHorizontal_bias="0.421"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <TextView
+            android:id="@+id/display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/myButton"
+            app:layout_constraintHorizontal_bias="0.488"
+            app:layout_constraintStart_toStartOf="@+id/myButton"
+            app:layout_constraintTop_toBottomOf="@+id/myButton" />
+
+        <Button
+            android:id="@+id/myButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:contentDescription="Back"
+            android:onClick="onCustomBackClick"
+            android:text="Submit"
+            app:layout_constraintEnd_toEndOf="@+id/editTextText"
+            app:layout_constraintHorizontal_bias="0.532"
+            app:layout_constraintStart_toStartOf="@+id/editTextText"
+            app:layout_constraintTop_toBottomOf="@+id/changeColorButton" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="249dp"
+            android:layout_height="161dp"
+            android:layout_gravity="center"
+            android:contentDescription="Strawberry"
+            android:src="@drawable/strawberry"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.022" />
+
+        <EditText
+            android:id="@+id/editTextText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:ems="10"
+            android:hint="Enter your name here"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.524"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="216dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="107dp"
+            app:layout_constraintEnd_toEndOf="@+id/display"
+            app:layout_constraintStart_toStartOf="@+id/display"
+            app:layout_constraintTop_toBottomOf="@+id/myButton" />
+
+        <Button
+            android:id="@+id/changeColorButton"
+            android:layout_width="123dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="32dp"
+            android:background="#F48D77"
+            android:text="Change Color"
+            android:textColor="#333131"
+            app:layout_constraintEnd_toEndOf="@+id/editTextText"
+            app:layout_constraintHorizontal_bias="0.563"
+            app:layout_constraintStart_toStartOf="@+id/editTextText"
+            app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="249dp"
+            android:layout_height="161dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="36dp"
+            android:contentDescription="Strawberry"
+            android:src="@drawable/strawberry"
+            app:layout_constraintEnd_toEndOf="@+id/spinner"
+            app:layout_constraintHorizontal_bias="0.636"
+            app:layout_constraintStart_toStartOf="@+id/spinner"
+            app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+        <Button
+            android:id="@+id/openButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:onClick="openSecondLayout"
+            android:text="Open Second Layout"
+            app:layout_constraintEnd_toEndOf="@+id/imageView2"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
